@@ -277,16 +277,7 @@
 
                     <!-- PAGINATION -->
                     <ais-pagination>
-                        <div slot-scope="{
-                                currentRefinement,
-                                nbPages,
-                                pages,
-                                isFirstPage,
-                                isLastPage,
-                                refine,
-                                createURL
-                            }"
-                        >
+                        <div slot-scope="{ currentRefinement, nbPages, pages, isFirstPage, isLastPage, refine, createURL }">
 
                         <vs-pagination
 

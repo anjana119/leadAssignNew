@@ -46,29 +46,7 @@ const router = new Router({
         // =============================================================================
                 {
                     path: '/',
-                    redirect: '/pages/login'
-                },
-                // {
-                //     path: '/dashboard/create-post',
-                //     name: 'create-post',
-                //     component: () => import('./views/pages/post-UI/SocialPost.vue'),
-                //     meta: {
-                //         rule: 'editor',
-                //     }
-                // },
-                {
-                    path: '/dashboard/create-post',
-                    name: 'social-post',
-                    component: () =>
-                        import ('@/views/pages/post-UI/SocialPost.vue'),
-                    meta: {
-                        breadcrumb: [
-                            { title: 'Social', url: '/dashboard/analytics' },
-                            { title: 'Create', active: true },
-                        ],
-                        pageTitle: 'Social',
-                        rule: 'editor'
-                    },
+                    redirect: '/pages/home'
                 },
                 {
                     path: '/dashboard/analytics',
@@ -219,20 +197,6 @@ const router = new Router({
                             { title: 'List', active: true },
                         ],
                         pageTitle: 'User List',
-                        rule: 'editor'
-                    },
-                },
-                {
-                    path: '/pages/social-post',
-                    name: 'social-post',
-                    component: () =>
-                        import ('@/views/pages/post-UI/SocialPost.vue'),
-                    meta: {
-                        breadcrumb: [
-                            { title: 'Social', url: '/' },
-                            { title: 'Publish', active: true },
-                        ],
-                        pageTitle: 'Social',
                         rule: 'editor'
                     },
                 },
@@ -1335,6 +1299,14 @@ const router = new Router({
                     path: '/callback',
                     name: 'auth-callback',
                     component: () => import('@/views/Callback.vue'),
+                    meta: {
+                        rule: 'editor'
+                    }
+                },
+                {
+                    path: '/pages/home',
+                    name: 'page-home',
+                    component: () => import('@/views/pages/landing/home.vue'),
                     meta: {
                         rule: 'editor'
                     }
