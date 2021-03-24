@@ -1,6 +1,6 @@
 <template>
   <div class="layout--full-page">
-    <div class="flex w-full vx-row no-gutter justify-center items-center" style="background: #fff !important; height: 90px;">
+    <div class="flex w-full vx-row no-gutter justify-center items-center" style="background: #fff !important; height: 90px;" v-if="scowComp === 1">
       <div style="width: 100%;">
         <vs-navbar v-model="activeItem" class="p-5">
           <div slot="title">
@@ -85,8 +85,21 @@ export default ({
           socialMedia: "Email Finder",
           logo: "",
         }
-      ]
+      ],
+      scowComp: 0
     };
+  },
+  created() {
+    this.handleHeaderComponent();
+  },
+  methods: {
+    handleHeaderComponent() {
+      if (this._routerRoot._route.path === "/pages/home") {
+        this.scowComp = 1;
+      } else {
+        this.scowComp = 0;
+      }
+    }
   }
 })
 </script>
