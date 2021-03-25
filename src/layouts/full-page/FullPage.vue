@@ -2,7 +2,7 @@
   <div class="layout--full-page">
     <div class="flex w-full vx-row no-gutter justify-center items-center" style="background: #fff !important; height: 90px;" v-if="scowComp === 1">
       <div style="width: 100%;">
-        <vs-navbar v-model="activeItem" class="p-5">
+        <vs-navbar class="p-5">
           <div slot="title">
             <vs-navbar-title>
               <img src="@/assets/images/newUpLeadLogo.png" alt="content-img" class="responsive" style="width: 50%;">
@@ -17,31 +17,33 @@
               <vs-dropdown-menu class="dropdown-login">
                   <vs-list>
                       <transition-group>
-                          <vs-list-item class="list-item" v-for="listItem in list" :key="listItem.socialMedia" :title="listItem.socialMedia">
-                            <vs-avatar src="https://i.imgur.com/ezM6SJ5.png"/>
+                          <vs-list-item class="list-item" v-for="listItem in list" :key="listItem.socialMedia">
+                            <vs-avatar :src="listItem.logo"/>
+                            <span class="spanTagInCustomDropDown">{{listItem.socialMedia}}</span>
                           </vs-list-item>
                       </transition-group>
                   </vs-list>
               </vs-dropdown-menu>
             </vs-dropdown>
-          </vs-navbar-item>
-          <vs-navbar-item index="0">
-            <a href="#">Pricing</a>
+            <!-- <a id="firstTabIndex" v-on:mouseover="handleOver()" v-on:mouseout="removeHandleOver()" href="#">Products</a> -->
           </vs-navbar-item>
           <vs-navbar-item index="1">
-            <a href="#">Our Data</a>
+            <a href="#">Pricing</a>
           </vs-navbar-item>
           <vs-navbar-item index="2">
-            <a href="#">Reviews</a>
+            <a href="#">Our Data</a>
           </vs-navbar-item>
           <vs-navbar-item index="3">
+            <a href="#">Reviews</a>
+          </vs-navbar-item>
+          <vs-navbar-item index="4">
             <a href="#">About Us</a>
           </vs-navbar-item>
-          <vs-navbar-item index="4" class="loginContent">
+          <vs-navbar-item index="5" class="loginContent">
             <vs-button color="dark" type="flat" icon-pack="feather" icon="icon-user">Login</vs-button>
             <a href="#" class="headerLogin">Login</a>
           </vs-navbar-item>
-          <vs-navbar-item index="5">
+          <vs-navbar-item index="6">
             <vs-button class="startFreeTrial" color="primary" type="filled">Start Free Trial</vs-button>
             <a href="#" class="headerLogin">Start Free Trial</a>
           </vs-navbar-item>
@@ -59,31 +61,31 @@ export default ({
       list: [
         {
           socialMedia: "Prospector",
-          logo: "",
+          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/6972ee2b-e515-4300-a8e9-b2c6a947aa77.png",
         },
         {
           socialMedia: "Data Enrichment",
-          logo: "",
+          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/21c178c5-83db-48b8-937a-a65d633a278c.png",
         },
         {
           socialMedia: "Chrome Extension",
-          logo: "",
+          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/7925cfc6-d696-4718-82c8-88a93cf822fa.png",
         },
         {
           socialMedia: "API",
-          logo: "",
+          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/eb39716f-f92d-417b-b831-b33c1e64724a.png",
         },
         {
           socialMedia: "Email Verification",
-          logo: "",
+          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/1d79bd34-5e28-495c-bbf4-8e3360729059.png",
         },
         {
           socialMedia: "Technographics",
-          logo: "",
+          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/bb2e22ef-c156-4da3-b896-ce55130814d6.png",
         },
         {
           socialMedia: "Email Finder",
-          logo: "",
+          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/d2128fe1-fd24-4cbb-ad7f-75fda4fa6a06.png",
         }
       ],
       scowComp: 0
@@ -99,6 +101,12 @@ export default ({
       } else {
         this.scowComp = 0;
       }
+    },
+    handleOver() {
+      
+    },
+    removeHandleOver() {
+      
     }
   }
 })
@@ -110,12 +118,23 @@ export default ({
     margin-right: auto;
     margin-left: 6%;
   }
+  .spanTagInCustomDropDown {
+    padding-left: 5px;
+    font-weight: 500;
+    bottom: 10px;
+    position: relative;
+    cursor: pointer;
+  }
   .vs-navbar--title {
     display: flex;
     justify-content: flex-end;
   }
   .vs-list {
     padding: 8px;
+  }
+  .vs-list--slot {
+    margin-left: 0px !important;
+    margin-bottom: -6px;
   }
   .headerLogin {
     display: none !important;
@@ -148,6 +167,9 @@ export default ({
     font-weight: 500;
     color: #69727A;
     padding: 15px 12px 15px 12px;
+  }
+  .vs-popup--header {
+    display: none;
   }
   .vs-con-dropdown {
     cursor: pointer;
