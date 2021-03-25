@@ -5,47 +5,50 @@
         <vs-navbar class="p-5">
           <div slot="title">
             <vs-navbar-title>
-              <img src="@/assets/images/newUpLeadLogo.png" alt="content-img" class="responsive" style="width: 50%;">
+              <img src="@/assets/images/newUpLeadLogo.png" alt="content-img" class="responsive" style="width: 50%; cursor: pointer;" @click="handleRedirectToView('/pages/home')">
             </vs-navbar-title>
           </div>
           <vs-navbar-item index="0">
-            <vs-dropdown vs-custom-content vs-trigger-click>
+            <vs-dropdown vs-custom-content vs-trigger-click id="vsDropdown">
               <a class="flex items-center anqurTagAsBtn" href.prevent>
                 <span style="curser: pointer;">Products</span>
                 <feather-icon icon="ChevronDownIcon" svgClasses="h-4 w-4 ml-1" />
               </a>
               <vs-dropdown-menu class="dropdown-login">
-                  <vs-list>
-                      <transition-group>
-                          <vs-list-item class="list-item" v-for="listItem in list" :key="listItem.socialMedia">
-                            <vs-avatar :src="listItem.logo"/>
-                            <span class="spanTagInCustomDropDown">{{listItem.socialMedia}}</span>
-                          </vs-list-item>
-                      </transition-group>
-                  </vs-list>
+                <vs-list>
+                  <transition-group>
+                    <vs-list-item class="list-item" v-for="listItem in list" :key="listItem.socialMedia">
+                      <vs-avatar :src="listItem.logo"/>
+                      <span class="spanTagInCustomDropDown">{{listItem.socialMedia}}</span>
+                    </vs-list-item>
+                  </transition-group>
+                </vs-list>
               </vs-dropdown-menu>
             </vs-dropdown>
-            <!-- <a id="firstTabIndex" v-on:mouseover="handleOver()" v-on:mouseout="removeHandleOver()" href="#">Products</a> -->
+            <!-- <a id="firstTabIndex" v-on:mouseover="handleOver()" v-on:mouseout="removeHandleOver()" href="#">
+              Products
+              <feather-icon icon="ChevronDownIcon" svgClasses="h-4 w-4 ml-1" />
+            </a> -->
           </vs-navbar-item>
           <vs-navbar-item index="1">
-            <a href="#">Pricing</a>
+            <a href="/pages/pricing">Pricing</a>
           </vs-navbar-item>
           <vs-navbar-item index="2">
-            <a href="#">Our Data</a>
+            <a href="/">Our Data</a>
           </vs-navbar-item>
           <vs-navbar-item index="3">
-            <a href="#">Reviews</a>
+            <a href="/">Reviews</a>
           </vs-navbar-item>
           <vs-navbar-item index="4">
-            <a href="#">About Us</a>
+            <a href="/">About Us</a>
           </vs-navbar-item>
           <vs-navbar-item index="5" class="loginContent">
             <vs-button color="dark" type="flat" icon-pack="feather" icon="icon-user">Login</vs-button>
-            <a href="#" class="headerLogin">Login</a>
+            <a href="/" class="headerLogin">Login</a>
           </vs-navbar-item>
           <vs-navbar-item index="6">
             <vs-button class="startFreeTrial" color="primary" type="filled">Start Free Trial</vs-button>
-            <a href="#" class="headerLogin">Start Free Trial</a>
+            <a href="/" class="headerLogin">Start Free Trial</a>
           </vs-navbar-item>
         </vs-navbar>
       </div>
@@ -96,17 +99,20 @@ export default ({
   },
   methods: {
     handleHeaderComponent() {
-      if (this._routerRoot._route.path === "/pages/home") {
+      if (this._routerRoot._route.path === "/pages/home" || this._routerRoot._route.path === "/pages/pricing") {
         this.scowComp = 1;
       } else {
         this.scowComp = 0;
       }
     },
+    handleRedirectToView(path) {
+      this.$router.push(path);
+    },
     handleOver() {
-      
+      document.getElementById("vsDropdown").click();
     },
     removeHandleOver() {
-      
+      document.getElementById("vsDropdown").onreset();
     }
   }
 })
@@ -124,6 +130,9 @@ export default ({
     bottom: 10px;
     position: relative;
     cursor: pointer;
+  }
+  .spanTagInCustomDropDown:hover {
+    font-weight: 600;
   }
   .vs-navbar--title {
     display: flex;

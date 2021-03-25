@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full no-gutter" style="background: white !important; height: 90vh !important;">
+    <div class="w-full no-gutter" style="background: white !important; height: auto !important;">
         <div class="vx-row">
             <div class="vx-col w-full sm:w-1/2 md:w-1/2 landingBodyFirstCol" style="padding-top: 100px; padding-left: 350px;">
                 <div>
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="vx-col w-full sm:w-1/2 md:w-1/2" style="padding-top: 50px;">
-                <img src="@/assets/images/landingRightImage.png" alt="content-img" class="responsive" style="height: 78%;">
+                <img src="@/assets/images/landingRightImage.png" alt="content-img" class="responsive" style="height: 100%;">
             </div>
         </div>
     </div>

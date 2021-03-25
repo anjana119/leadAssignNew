@@ -1312,6 +1312,14 @@ const router = new Router({
                     }
                 },
                 {
+                    path: '/pages/pricing',
+                    name: 'page-price',
+                    component: () => import('@/views/pages/landing/price.vue'),
+                    meta: {
+                        rule: 'editor'
+                    }
+                },
+                {
                     path: '/pages/login',
                     name: 'page-login',
                     component: () => import('@/views/pages/login/Login.vue'),

@@ -36,12 +36,6 @@ export default [
     i18n: "Dashboard",
     submenu: [
       {
-        url: '/dashboard/create-post',
-        name: "Create Post",
-        slug: "create-post",
-        i18n: "Create Post",
-      },
-      {
         url: '/dashboard/analytics',
         name: "Analytics",
         slug: "dashboard-analytics",
