@@ -22,7 +22,7 @@
         </div>
         <div style="display: flex; justify-content: center;" class="mb-5">
             <div class="vx-row" style="width: 67%;">
-                <div class="vx-col w-full sm:w-1/2 md:w-1/4 lg:w-1/4 firstColPricing" style="padding-top: 100px; padding-bottom: 25px;">
+                <div class="vx-col w-full sm:w-1/2 md:w-1/4 lg:w-1/4 firstColPricing" style="padding-top: 70px; padding-bottom: 60px;">
                     <div class="pricingContentFree">
                         <h3 class="contentHeaderFree">Free Trial</h3>
                         <hr class="hrTag" />
