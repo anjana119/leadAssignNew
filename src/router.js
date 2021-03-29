@@ -1320,6 +1320,38 @@ const router = new Router({
                     }
                 },
                 {
+                    path: '/pages/ourData',
+                    name: 'page-our-data',
+                    component: () => import('@/views/pages/landing/ourData.vue'),
+                    meta: {
+                        rule: 'editor'
+                    }
+                },
+                {
+                    path: '/pages/review',
+                    name: 'page-review',
+                    component: () => import('@/views/pages/landing/review.vue'),
+                    meta: {
+                        rule: 'editor'
+                    }
+                },
+                {
+                    path: '/pages/about-us',
+                    name: 'page-about-us',
+                    component: () => import('@/views/pages/landing/aboutUs.vue'),
+                    meta: {
+                        rule: 'editor'
+                    }
+                },
+                {
+                    path: '/pages/new-landing',
+                    name: 'page-new-landing',
+                    component: () => import('@/views/pages/landing/newLanding.vue'),
+                    meta: {
+                        rule: 'editor'
+                    }
+                },
+                {
                     path: '/pages/login',
                     name: 'page-login',
                     component: () => import('@/views/pages/login/Login.vue'),

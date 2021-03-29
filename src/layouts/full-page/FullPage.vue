@@ -1,11 +1,21 @@
 <template>
   <div class="layout--full-page">
-    <div class="flex w-full vx-row no-gutter justify-center items-center" style="background: #fff !important; height: 90px;" v-if="scowComp === 1">
+    <div
+      class="flex w-full vx-row no-gutter justify-center items-center"
+      style="background: #fff !important; height: 90px;"
+      v-if="scowComp === 1"
+    >
       <div style="width: 100%;">
         <vs-navbar class="p-5">
           <div slot="title">
             <vs-navbar-title>
-              <img src="@/assets/images/newUpLeadLogo.png" alt="content-img" class="responsive" style="width: 50%; cursor: pointer;" @click="handleRedirectToView('/pages/home')">
+              <img
+                src="@/assets/images/newUpLeadLogo.png"
+                alt="content-img"
+                class="responsive"
+                style="width: 50%; cursor: pointer;"
+                @click="handleRedirectToView('/pages/home')"
+              />
             </vs-navbar-title>
           </div>
           <vs-navbar-item index="0">
@@ -17,38 +27,75 @@
               <vs-dropdown-menu class="dropdown-login">
                 <vs-list>
                   <transition-group>
-                    <vs-list-item class="list-item" v-for="listItem in list" :key="listItem.socialMedia">
+                    <vs-list-item class="list-item" v-for="listItem in list" :key="listItem.text">
                       <vs-avatar :src="listItem.logo"/>
-                      <span class="spanTagInCustomDropDown">{{listItem.socialMedia}}</span>
+                      <span class="spanTagInCustomDropDown" @click="handleSelectDropdownValue(listItem.text)">
+                        {{listItem.text}}
+                      </span>
                     </vs-list-item>
                   </transition-group>
                 </vs-list>
               </vs-dropdown-menu>
             </vs-dropdown>
-            <!-- <a id="firstTabIndex" v-on:mouseover="handleOver()" v-on:mouseout="removeHandleOver()" href="#">
-              Products
-              <feather-icon icon="ChevronDownIcon" svgClasses="h-4 w-4 ml-1" />
-            </a> -->
           </vs-navbar-item>
           <vs-navbar-item index="1">
-            <a href="/pages/pricing">Pricing</a>
+            <a
+              style="cursor: pointer;"
+              :class="path === 'pricing' ? 'selectedTabSection' : ''"
+              @click="handleRedirectToView('/pages/pricing')"
+            >
+              Pricing
+            </a>
           </vs-navbar-item>
           <vs-navbar-item index="2">
-            <a href="/">Our Data</a>
+            <a
+              style="cursor: pointer;"
+              :class="path === 'ourData' ? 'selectedTabSection' : ''"
+              @click="handleRedirectToView('/pages/ourData')"
+            >
+              Our Data
+            </a>
           </vs-navbar-item>
           <vs-navbar-item index="3">
-            <a href="/">Reviews</a>
+            <a
+              style="cursor: pointer;"
+              :class="path === 'review' ? 'selectedTabSection' : ''"
+              @click="handleRedirectToView('/pages/review')"
+            >
+              Reviews
+            </a>
           </vs-navbar-item>
           <vs-navbar-item index="4">
-            <a href="/">About Us</a>
+            <a
+              style="cursor: pointer;"
+              :class="path === 'about-us' ? 'selectedTabSection' : ''"
+              @click="handleRedirectToView('/pages/about-us')"
+            >
+              About Us
+            </a>
           </vs-navbar-item>
           <vs-navbar-item index="5" class="loginContent">
-            <vs-button color="dark" type="flat" icon-pack="feather" icon="icon-user">Login</vs-button>
-            <a href="/" class="headerLogin">Login</a>
+            <vs-button
+              color="dark"
+              type="flat"
+              icon-pack="feather"
+              icon="icon-user"
+              @click="handleRedirectToView('/pages/login')"
+            >
+              Login
+            </vs-button>
+            <a
+              style="cursor: pointer;"
+              class="headerLogin"
+              :class="path === 'review' ? 'selectedTabSection' : ''"
+              @click="handleRedirectToView('/pages/login')"
+            >
+              Login
+            </a>
           </vs-navbar-item>
           <vs-navbar-item index="6">
             <vs-button class="startFreeTrial" color="primary" type="filled">Start Free Trial</vs-button>
-            <a href="/" class="headerLogin">Start Free Trial</a>
+            <a style="cursor: pointer;" href="/" class="headerLogin">Start Free Trial</a>
           </vs-navbar-item>
         </vs-navbar>
       </div>
@@ -63,43 +110,79 @@ export default ({
     return {
       list: [
         {
-          socialMedia: "Prospector",
-          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/6972ee2b-e515-4300-a8e9-b2c6a947aa77.png",
+          text: "Prospector",
+          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/d0571644-4fe5-4d7d-96cb-e347f250eb40.png",
         },
         {
-          socialMedia: "Data Enrichment",
-          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/21c178c5-83db-48b8-937a-a65d633a278c.png",
+          text: "Data Enrichment",
+          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/c5b4e495-3cb1-49f4-a2ba-d79ff7a0b9e1.png",
         },
         {
-          socialMedia: "Chrome Extension",
-          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/7925cfc6-d696-4718-82c8-88a93cf822fa.png",
+          text: "Chrome Extension",
+          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/be0b6b98-94db-4925-bd33-fffb3a9ffe69.png",
         },
         {
-          socialMedia: "API",
-          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/eb39716f-f92d-417b-b831-b33c1e64724a.png",
+          text: "API",
+          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/6d9f895f-dfda-4919-9813-7ca6b285a973.png",
         },
         {
-          socialMedia: "Email Verification",
-          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/1d79bd34-5e28-495c-bbf4-8e3360729059.png",
+          text: "Email Verification",
+          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/eb5d64d7-eeeb-4581-b26c-7b6540b56714.png",
         },
         {
-          socialMedia: "Technographics",
-          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/bb2e22ef-c156-4da3-b896-ce55130814d6.png",
+          text: "Technographics",
+          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/6a7308aa-1d3e-4b78-86fc-ce7424929c00.png",
         },
         {
-          socialMedia: "Email Finder",
-          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/d2128fe1-fd24-4cbb-ad7f-75fda4fa6a06.png",
+          text: "Email Finder",
+          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/11455135-03e3-4be7-bc53-49f1a7880a71.png",
+        },
+        {
+          text: "New Ui Landing",
+          logo: "",
         }
       ],
+      path: "",
       scowComp: 0
     };
   },
+  watch: {
+    "$route"() {
+      this.path = this._routerRoot._route.path === "/pages/home"  ? '' :
+        this._routerRoot._route.path === "/pages/pricing" ? "pricing" :
+        this._routerRoot._route.path === "/pages/ourData" ? "ourData" :
+        this._routerRoot._route.path === "/pages/review" ? "review" :
+        "about-us";
+      this.handleHeaderComponent();
+    }
+  },
   created() {
     this.handleHeaderComponent();
+    this.handleRouteMode();
   },
   methods: {
+    handleSelectDropdownValue(value) {
+      if (value === "New Ui Landing") {
+        this.$router.push("/pages/new-landing");
+      } else {
+        alert(value);
+      }
+    },
+    handleRouteMode() {
+      this.path = this._routerRoot._route.path === "/pages/home"  ? '' :
+        this._routerRoot._route.path === "/pages/pricing" ? "pricing" :
+        this._routerRoot._route.path === "/pages/ourData" ? "ourData" :
+        this._routerRoot._route.path === "/pages/review" ? "review" :
+        "about-us";
+    },
     handleHeaderComponent() {
-      if (this._routerRoot._route.path === "/pages/home" || this._routerRoot._route.path === "/pages/pricing") {
+      if (
+        this._routerRoot._route.path === "/pages/home" ||
+        this._routerRoot._route.path === "/pages/pricing" ||
+        this._routerRoot._route.path === "/pages/ourData" ||
+        this._routerRoot._route.path === "/pages/review" ||
+        this._routerRoot._route.path === "/pages/about-us"
+      ) {
         this.scowComp = 1;
       } else {
         this.scowComp = 0;
@@ -107,12 +190,6 @@ export default ({
     },
     handleRedirectToView(path) {
       this.$router.push(path);
-    },
-    handleOver() {
-      document.getElementById("vsDropdown").click();
-    },
-    removeHandleOver() {
-      document.getElementById("vsDropdown").onreset();
     }
   }
 })
@@ -124,12 +201,19 @@ export default ({
     margin-right: auto;
     margin-left: 6%;
   }
+  .vs-navbar {
+    background: white !important;
+  }
   .spanTagInCustomDropDown {
     padding-left: 5px;
     font-weight: 500;
     bottom: 10px;
     position: relative;
     cursor: pointer;
+  }
+  .selectedTabSection {
+    font-size: 17px !important;
+    font-weight: 600 !important;
   }
   .spanTagInCustomDropDown:hover {
     font-weight: 600;
