@@ -3,7 +3,6 @@
     <div
       class="flex w-full vx-row no-gutter justify-center items-center"
       style="background: #fff !important; height: 90px;"
-      v-if="scowComp === 1"
     >
       <div style="width: 100%;">
         <vs-navbar class="p-5">
@@ -21,7 +20,9 @@
           <vs-navbar-item index="0">
             <vs-dropdown vs-custom-content vs-trigger-click id="vsDropdown">
               <a class="flex items-center anqurTagAsBtn" href.prevent>
-                <span style="curser: pointer;">Products</span>
+                <span style="curser: pointer;">
+                  Products
+                </span>
                 <feather-icon icon="ChevronDownIcon" svgClasses="h-4 w-4 ml-1" />
               </a>
               <vs-dropdown-menu class="dropdown-login">
@@ -74,7 +75,7 @@
               About Us
             </a>
           </vs-navbar-item>
-          <vs-navbar-item index="5" class="loginContent">
+          <vs-navbar-item index="5">
             <vs-button
               color="dark"
               type="flat"
@@ -94,8 +95,12 @@
             </a>
           </vs-navbar-item>
           <vs-navbar-item index="6">
-            <vs-button class="startFreeTrial" color="primary" type="filled">Start Free Trial</vs-button>
-            <a style="cursor: pointer;" href="/" class="headerLogin">Start Free Trial</a>
+            <vs-button class="startFreeTrial" color="danger" type="filled">
+              Start Free Trial
+            </vs-button>
+            <a style="cursor: pointer;" href="/" class="headerLogin">
+              Start Free Trial
+            </a>
           </vs-navbar-item>
         </vs-navbar>
       </div>
@@ -111,35 +116,31 @@ export default ({
       list: [
         {
           text: "Prospector",
-          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/d0571644-4fe5-4d7d-96cb-e347f250eb40.png",
+          logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/93a7c948-8386-4c53-8bed-5aa4bfe20f82.png",
         },
         {
           text: "Data Enrichment",
-          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/c5b4e495-3cb1-49f4-a2ba-d79ff7a0b9e1.png",
+          logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/315a46c4-4fdd-45c7-b172-de776a3b2403.png",
         },
         {
           text: "Chrome Extension",
-          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/be0b6b98-94db-4925-bd33-fffb3a9ffe69.png",
+          logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/f33e5a69-3ad3-45db-85bf-335138af3609.png",
         },
         {
           text: "API",
-          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/6d9f895f-dfda-4919-9813-7ca6b285a973.png",
+          logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/a90dd4e0-ae61-42d5-9735-8adb64c650cc.png",
         },
         {
           text: "Email Verification",
-          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/eb5d64d7-eeeb-4581-b26c-7b6540b56714.png",
+          logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/c6a7ff87-f94e-4351-aa5a-9aef5cf841ac.png",
         },
         {
           text: "Technographics",
-          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/6a7308aa-1d3e-4b78-86fc-ce7424929c00.png",
+          logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/634a9c9f-bc62-4e23-9fd7-b8c9e5ed63cb.png",
         },
         {
           text: "Email Finder",
-          logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/11455135-03e3-4be7-bc53-49f1a7880a71.png",
-        },
-        {
-          text: "New Ui Landing",
-          logo: "",
+          logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/95e3a247-9edf-454a-a45d-c0d947b60737.png",
         }
       ],
       path: "",
@@ -162,11 +163,7 @@ export default ({
   },
   methods: {
     handleSelectDropdownValue(value) {
-      if (value === "New Ui Landing") {
-        this.$router.push("/pages/new-landing");
-      } else {
-        alert(value);
-      }
+      alert(value);
     },
     handleRouteMode() {
       this.path = this._routerRoot._route.path === "/pages/home"  ? '' :
@@ -195,35 +192,33 @@ export default ({
 })
 </script>
 
-
 <style>
   .vs-con-items {
-    margin-right: auto;
-    margin-left: 6%;
+    margin: 0px;
   }
   .vs-navbar {
     background: white !important;
   }
   .spanTagInCustomDropDown {
     padding-left: 5px;
-    font-weight: 500;
+    font-weight: 400;
     bottom: 10px;
     position: relative;
     cursor: pointer;
+  }
+  .spanTagInCustomDropDown:hover {
+    font-weight: 500;
   }
   .selectedTabSection {
     font-size: 17px !important;
     font-weight: 600 !important;
   }
-  .spanTagInCustomDropDown:hover {
-    font-weight: 600;
-  }
   .vs-navbar--title {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
   .vs-list {
-    padding: 8px;
+    padding: 15px;
   }
   .vs-list--slot {
     margin-left: 0px !important;
@@ -251,14 +246,13 @@ export default ({
   }
   .vs-navbar-color-transparent .vs-navbar--item a:hover {
     color: #69727A !important;
-    font-size: 18px;
   }
   .anqurTagAsBtn {
     color: inherit;
     font-family: "Gilroy",Sans-serif;
     font-size: 17px;
     font-weight: 500;
-    color: #69727A;
+    color: white;
     padding: 15px 12px 15px 12px;
   }
   .vs-popup--header {
@@ -267,8 +261,11 @@ export default ({
   .vs-con-dropdown {
     cursor: pointer;
   }
+  .startFreeTrial {
+    background: #fb4141 !important;
+  }
   .vs-navbar .vs-navbar--item a:hover {
-    font-size: 18px;
+    font-weight: 600;
   }
   .vs-button-dark.vs-button-border:hover, .vs-button-dark.vs-button-flat:hover {
     background: transparent !important;

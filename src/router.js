@@ -1344,14 +1344,6 @@ const router = new Router({
                     }
                 },
                 {
-                    path: '/pages/new-landing',
-                    name: 'page-new-landing',
-                    component: () => import('@/views/pages/landing/newLanding.vue'),
-                    meta: {
-                        rule: 'editor'
-                    }
-                },
-                {
                     path: '/pages/login',
                     name: 'page-login',
                     component: () => import('@/views/pages/login/Login.vue'),

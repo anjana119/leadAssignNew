@@ -11,8 +11,12 @@
                             <div class="flex justify-center flex items-center text-center p-6">
                                 <div>
                                     <vs-avatar size="70px" :src="card.logo"/>
-                                    <h3 class="mb-4 font-bold cardHeaderOurDataSecond">{{ card.heding }}</h3>
-                                    <span class="cardTextOurData">{{ card.text }}</span>
+                                    <h3 class="mb-4 font-bold cardHeaderOurDataSecond">
+                                        {{ card.heding }}
+                                    </h3>
+                                    <span class="cardTextOurData">
+                                        {{ card.text }}
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -29,17 +33,17 @@
             return {
                 cardList: [
                     {
-                        logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/9a67cbef-e2e9-4bbe-8d18-8cbf112bc33b.png",
+                        logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/319d8497-be79-4eec-a7d9-28f4a50c0bce.png",
                         text: "O2Oleads gives you access to 54M+ business contacts worldwide, making it easy for you to build targeted prospect lists. To identify your ideal prospects, search by title, job function, management level, industry, location, company size, technologies used and more.",
                         heding: "54M+ B2B Contacts At Your Fingertips"
                     },
                     {
-                        logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/577e6c69-5079-41cc-878b-adc0cc339557.png",
+                        logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/effdac34-1812-40d3-8ccb-b0ef7695a71e.png",
                         text: "O2Oleads is the only tool in the market to provide real-time email verification. Anytime you download or export leads, we verify the email address in real-time. This translates into higher response rates and more conversions for you.",
                         heding: "High Quality Real-Time Verified Data"
                     },
                     {
-                        logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/c8d263f8-3766-4944-a324-961f17f97b62.png",
+                        logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/83b3edb1-7c44-4746-ad03-363c28c5948c.png",
                         text: "O2Oleads automatically enriches your data with over 50 different data points, including job function, management level, social media links, and more. This gives you more context, and allows you to build rapport with your prospects.",
                         heding: "Data Enrichment with 50+ Data Points"
                     }

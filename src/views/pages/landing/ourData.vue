@@ -8,12 +8,16 @@
                 <div>
                     <div class="vx-row mainRow">
                         <div class="vx-col w-1/2 md:w-1/4 xl:w-1/4" v-for="(card, index) in cardList" :key="index">
-                            <vx-card class="overflow-hidden cardInOurData">
+                            <vx-card class="overflow-hidden cardInOurData" style="cursor: pointer;">
                                 <div slot="no-body">
                                     <div class="flex justify-center flex items-center text-center p-6" >
                                         <div>
-                                            <h2 class="mb-1 font-bold cardHeaderOurData">{{ card.heding }}</h2>
-                                            <span class="cardTextOurData">{{ card.text }}</span>
+                                            <h2 class="mb-1 font-bold cardHeaderOurData">
+                                                {{ card.heding }}
+                                            </h2>
+                                            <span class="cardTextOurData">
+                                                {{ card.text }}
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -28,14 +32,27 @@
                 <h1 class="headingSecondOurData">
                     O2OLeads Data Collection and Verification Process
                 </h1>
-                <div class="vx-row" style="display: flex; justify-content: center; margin-bottom: 35px;" v-for="(item, mainIndex) in secondCardList" :key="mainIndex">
-                    <div class="vx-col w-1/2 md:w-1/4 lg:w-1/4 secondColOurData" v-for="(card, index) in item.col" :key="index">
+                <div
+                    class="vx-row"
+                    style="display: flex; justify-content: center; margin-bottom: 35px;"
+                    v-for="(item, mainIndex) in secondCardList"
+                    :key="mainIndex"
+                >
+                    <div
+                        class="vx-col w-1/2 md:w-1/4 lg:w-1/4 secondColOurData"
+                        v-for="(card, index) in item.col"
+                        :key="index"
+                    >
                         <div class="ourDataBlogContent">
                             <div class="flex justify-center flex items-center text-center p-6">
                                 <div>
                                     <vs-avatar size="70px" :src="card.logo"/>
-                                    <h2 class="mb-3 font-bold cardHeaderOurDataSecond">{{ card.heding }}</h2>
-                                    <span class="cardTextOurData">{{ card.text }}</span>
+                                    <h2 class="mb-3 font-bold cardHeaderOurDataSecond">
+                                        {{ card.heding }}
+                                    </h2>
+                                    <span class="cardTextOurData">
+                                        {{ card.text }}
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -72,22 +89,22 @@
                     {
                         col: [
                             {
-                                logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/f03a4278-e371-45ca-8fdb-436d59f52dc3.png",
+                                logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/91ea2ff6-ffd5-46ba-b54b-41e1fdc81a29.png",
                                 text: "We search and analyze millions of public documents to hunt down relevant information",
                                 heding: "STEP 1"
                             },
                             {
-                                logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/9543b3e1-3005-44bf-ba1e-0d7b541920c3.png",
+                                logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/3882221e-644c-4331-9607-58fe39f640a0.png",
                                 text: "To supplement our data, and make it even more comprehensive, we also license data from trusted third parties",
                                 heding: "STEP 2"
                             },
                             {
-                                logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/fe61ed51-fbcf-4cb3-9899-4839bfce4ae5.png",
+                                logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/2e256e7e-c606-4adc-a499-36f12aa882c3.png",
                                 text: "We analyze, categorize and label our data (Machine Learning, Rule-Based Learning, Proprietary Algorithms)",
                                 heding: "STEP 3"
                             },
                             {
-                                logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/eb8c921f-d613-4d67-8cb3-bfc5dce001e4.png",
+                                logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/9249c942-d8c7-4432-ae8a-4eb711a16954.png",
                                 text: "We test and validate our information to remove incorrect, stale and unverifiable information",
                                 heding: "STEP 4"
                             }
@@ -96,22 +113,22 @@
                     {
                         col: [
                             {
-                                logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/95412f6e-5358-40e2-8fea-735784220257.png",
+                                logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/d988abaa-8849-4545-9d57-180eefb126a7.png",
                                 text: "Accurate information is loaded into the UpLead database, ready for customers to access (By API or Web Application)",
                                 heding: "STEP 5"
                             },
                             {
-                                logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/93e4445d-14df-4ef6-b8df-00f20a442028.png",
+                                logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/94022abb-147f-4039-846a-201f0a535519.png",
                                 text: "At the point where customers download their data, we perform real-time email verification, and put our data through a final round of tests",
                                 heding: "STEP 6"
                             },
                             {
-                                logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/b0e3550d-b607-40df-ae28-ec9193380cc2.png",
+                                logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/cd380fef-c29f-4d2c-8849-6b5d1fff0cd3.png",
                                 text: "We deliver our accurate data to our customers (Any emails that could not be verified gets sent back to our team of manual researchers.)",
                                 heding: "STEP 7"
                             },
                             {
-                                logo: "https://mcusercontent.com/28bc087ca1b79740b9ea0d695/images/c0c21706-61af-4396-827e-f8486345a304.png",
+                                logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/ab27e78b-4c49-4483-87d6-f2c12bc3c602.png",
                                 text: "Researchers comb through the data painstakingly, and update UpLead’s database to close the loop",
                                 heding: "STEP 8"
                             }
@@ -180,6 +197,9 @@
     padding: 25px 0px 25px 0px;
     height: 210px;
 }
+.cardInOurData:hover {
+    border-width: 2px 2px 2px 2px;
+}
 .cardInOurDataSecond {
     border-style: solid;
     border-width: 1px 1px 1px 1px;
@@ -190,7 +210,7 @@
     padding: 25px 0px 25px 0px;
 }
 .cardHeaderOurData {
-    color: rgba(var(--vs-primary),1);
+    color: #fb4141;
     font-family: "Gilroy",Sans-serif;
     font-size: 50px;
     line-height: 54px;

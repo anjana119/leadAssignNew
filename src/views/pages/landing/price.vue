@@ -12,10 +12,16 @@
                 </div>
                 <div style="text-align: center;">
                     <span class="inline-flex subHeaderOptions">
-                        <span style="cursor: pointer;" @click="handleSwitch(false)">Billed Monthly</span>
-                        <vs-switch v-model="switch1" class="ml-8 mr-8" />
-                        <span style="cursor: pointer;" @click="handleSwitch(true)">Billed Annually -</span>
-                        <span class="ml-1 discount" @click="handleSwitch(true)">Save 25%</span>
+                        <span style="cursor: pointer;" @click="handleSwitch(false)">
+                            Billed Monthly
+                        </span>
+                        <vs-switch color="danger" v-model="switch1" class="ml-8 mr-8" />
+                        <span style="cursor: pointer;" @click="handleSwitch(true)">
+                            Billed Annually -
+                        </span>
+                        <span class="ml-1 discount" @click="handleSwitch(true)">
+                            Save 25%
+                        </span>
                     </span>
                 </div>
             </div>
@@ -24,26 +30,51 @@
             <div class="vx-row" style="width: 67%;">
                 <div class="vx-col w-full sm:w-1/2 md:w-1/4 lg:w-1/4 firstColPricing" style="padding-top: 70px; padding-bottom: 60px;">
                     <div class="pricingContentFree">
-                        <h3 class="contentHeaderFree">Free Trial</h3>
+                        <h3 class="contentHeaderFree">
+                            Free Trial
+                        </h3>
                         <hr class="hrTag" />
-                        <h1 class="priceCountFree">$0</h1>
-                        <h5 class="creditLimitFree">5 Credits</h5>
-                        <span class="testDriveFree">Free Test Drive</span>
-                        <vs-button class="btnFreeContent" color="primary" type="filled">Try For Free</vs-button>
+                        <h1 class="priceCountFree">
+                            $0
+                        </h1>
+                        <h5 class="creditLimitFree">
+                            5 Credits
+                        </h5>
+                        <span class="testDriveFree">
+                            Free Test Drive
+                        </span>
+                        <vs-button class="btnFreeContent" color="danger" type="filled">
+                            Try For Free
+                        </vs-button>
                         <hr class="hrTag" />
                         <vs-list style="color: white; margin-top: -15px; margin-left: -18px;">
-                            <vs-list-item v-for="(item, index) in freeItemListTextContent" :key="index" icon-pack="feather" icon="icon-check-circle" :title="item" />
+                            <vs-list-item
+                                v-for="(item, index) in freeItemListTextContent"
+                                :key="index"
+                                icon-pack="feather"
+                                icon="icon-check-circle"
+                                :title="item"
+                            />
                         </vs-list>
-                        <vs-button class="btnFreeContent" color="primary" type="filled">Try For Free</vs-button>
+                        <vs-button class="btnFreeContent" color="danger" type="filled">
+                            Try For Free
+                        </vs-button>
                     </div>
                 </div>
                 <div class="vx-col w-full sm:w-1/2 md:w-1/4 lg:w-1/4 secondColPricing" style="padding-top: 100px; padding-bottom: 25px;">
                     <div class="pricingContent">
-                        <h3 class="contentHeader">Essentials</h3>
+                        <h3 class="contentHeader">
+                            Essentials
+                        </h3>
                         <hr class="hrTag" />
-                        <h1 class="priceCount">{{switch1 === true ? "$890" : "$99"}} <span style="font-size: 15px; color: #69727A; margin-left: -15px;">{{switch1 === true ? "/year" : "/month"}}</span></h1>
+                        <h1 class="priceCount">
+                            {{switch1 === true ? "$890" : "$99"}} 
+                            <span style="font-size: 15px; color: #69727A; margin-left: -15px;">
+                                {{switch1 === true ? "/year" : "/month"}}
+                            </span>
+                        </h1>
                         <h5 class="creditLimit">
-                            <span style="color: rgba(var(--vs-primary),1); font-weight: 500;">
+                            <span style="color: #fb4141; font-weight: 500;">
                                 {{switch1 === true ? "2,040" : "170"}} Credits
                             </span>
                             {{switch1 === true ? "Annually" : "Monthly"}}
@@ -53,21 +84,38 @@
                                 $0.60
                             </span>
                         </span>
-                        <vs-button class="btnContent" color="primary" type="filled">Buy Now</vs-button>
+                        <vs-button class="btnContent" color="danger" type="filled">
+                            Buy Now
+                        </vs-button>
                         <hr class="hrTag" />
                         <vs-list class="anjana" style="color: #69727A; margin-top: -15px; margin-left: -18px;">
-                            <vs-list-item v-for="(item, index) in freeItemListTextContent" :key="index" icon-pack="feather" icon="icon-check-circle" :title="item" />
+                            <vs-list-item
+                                v-for="(item, index) in freeItemListTextContent"
+                                :key="index"
+                                icon-pack="feather"
+                                icon="icon-check-circle"
+                                :title="item"
+                            />
                         </vs-list>
-                        <vs-button class="btnContent" color="primary" type="filled">Buy Now</vs-button>
+                        <vs-button class="btnContent" color="danger" type="filled">
+                            Buy Now
+                        </vs-button>
                     </div>
                 </div>
                 <div class="vx-col w-full sm:w-1/2 md:w-1/4 lg:w-1/4 thirdColPricing" style="padding-top: 100px; padding-bottom: 25px;">
                     <div class="pricingContent">
-                        <h3 class="contentHeader">Plus</h3>
+                        <h3 class="contentHeader">
+                            Plus
+                        </h3>
                         <hr class="hrTag" />
-                        <h1 class="priceCount">{{switch1 === true ? "$1790" : "$199"}} <span style="font-size: 15px; color: #69727A; margin-left: -15px;">{{switch1 === true ? "/year" : "/month"}}</span></h1>
+                        <h1 class="priceCount">
+                            {{switch1 === true ? "$1790" : "$199"}} 
+                            <span style="font-size: 15px; color: #69727A; margin-left: -15px;">
+                                {{switch1 === true ? "/year" : "/month"}}
+                            </span>
+                        </h1>
                         <h5 class="creditLimit">
-                            <span style="color: rgba(var(--vs-primary),1); font-weight: 500;">
+                            <span style="color: #fb4141; font-weight: 500;">
                                 {{switch1 === true ? "4,800" : "400"}} Credits
                             </span>
                             {{switch1 === true ? "Annually" : "Monthly"}}
@@ -77,36 +125,64 @@
                                 $0.50
                             </span>
                         </span>
-                        <vs-button class="btnContent" color="primary" type="filled">Buy Now</vs-button>
+                        <vs-button class="btnContent" color="danger" type="filled">
+                            Buy Now
+                        </vs-button>
                         <hr class="hrTag" />
                         <vs-list class="anjana" style="color: #69727A; margin-top: -15px; margin-left: -18px;">
-                            <vs-list-item v-for="(item, index) in freeItemListTextContent" :key="index" icon-pack="feather" icon="icon-check-circle" :title="item" />
+                            <vs-list-item
+                                v-for="(item, index) in freeItemListTextContent"
+                                :key="index"
+                                icon-pack="feather"
+                                icon="icon-check-circle"
+                                :title="item"
+                            />
                         </vs-list>
-                        <vs-button class="btnContent" color="primary" type="filled">Buy Now</vs-button>
+                        <vs-button class="btnContent" color="danger" type="filled">
+                            Buy Now
+                        </vs-button>
                     </div>
                 </div>
                 <div class="vx-col w-full sm:w-1/2 md:w-1/4 lg:w-1/4 forthColPricing" style="padding-top: 100px; padding-bottom: 25px;">
                     <div class="pricingContent">
-                        <h3 class="contentHeader">Professional</h3>
+                        <h3 class="contentHeader">
+                            Professional
+                        </h3>
                         <hr class="hrTag" />
-                        <h1 class="priceCount">{{switch1 === true ? "$3590" : "$399"}} <span style="font-size: 15px; color: #69727A; margin-left: -15px;">{{switch1 === true ? "/year" : "/month"}}</span></h1>
+                        <h1 class="priceCount">
+                            {{switch1 === true ? "$3590" : "$399"}} 
+                            <span style="font-size: 15px; color: #69727A; margin-left: -15px;">
+                                {{switch1 === true ? "/year" : "/month"}}
+                            </span>
+                        </h1>
                         <h5 class="creditLimit">
-                            <span style="color: rgba(var(--vs-primary),1); font-weight: 500;">
+                            <span style="color: #fb4141; font-weight: 500;">
                                 {{switch1 === true ? "12,000" : "1000"}} Credits
                             </span>
                             {{switch1 === true ? "Annually" : "Monthly"}}
                         </h5>
-                        <span class="testDrive">Additional Credits
+                        <span class="testDrive">
+                            Additional Credits
                             <span style="font-weight: 500!important; color: #091D30;">
                                 $0.40
                             </span>
                         </span>
-                        <vs-button class="btnContent" color="primary" type="filled">Buy Now</vs-button>
+                        <vs-button class="btnContent" color="danger" type="filled">
+                            Buy Now
+                        </vs-button>
                         <hr class="hrTag" />
                         <vs-list class="anjana" style="color: #69727A; margin-top: -15px; margin-left: -18px;">
-                            <vs-list-item v-for="(item, index) in freeItemListTextContent" :key="index" icon-pack="feather" icon="icon-check-circle" :title="item === 'Single User' ? 'Unlimited Users' : item" />
+                            <vs-list-item
+                                v-for="(item, index) in freeItemListTextContent"
+                                :key="index"
+                                icon-pack="feather"
+                                icon="icon-check-circle"
+                                :title="item === 'Single User' ? 'Unlimited Users' : item"
+                            />
                         </vs-list>
-                        <vs-button class="btnContent" color="primary" type="filled">Buy Now</vs-button>
+                        <vs-button class="btnContent" color="danger" type="filled">
+                            Buy Now
+                        </vs-button>
                     </div>
                 </div>
             </div>
@@ -165,7 +241,7 @@ export default {
 }
 .btnFreeContent {
     background: white !important;
-    color: rgba(var(--vs-primary),1) !important;
+    color: #fb4141 !important;
     font-size: 15px;
     font-weight: 600;
     width: 100%;
@@ -174,12 +250,12 @@ export default {
     margin-bottom: 10px;
 }
 .btnFreeContent:hover {
-    background: rgba(var(--vs-primary),1) !important;
+    background: #fb4141 !important;
     color: white !important;
     border: 1px solid white !important;
 }
 .btnContent {
-    background: rgba(var(--vs-primary),1) !important;
+    background: #fb4141 !important;
     color: white !important;
     font-size: 15px;
     font-weight: 600;
@@ -190,11 +266,11 @@ export default {
 }
 .btnContent:hover {
     background: white !important;
-    color: rgba(var(--vs-primary),1) !important;
-    border: 1px solid rgba(var(--vs-primary),1) !important;
+    color: #fb4141 !important;
+    border: 1px solid #fb4141 !important;
 }
 .discount {
-    color: rgba(var(--vs-primary),1);
+    color: #fb4141;
     font-weight: 600;
     cursor: pointer;
 }
@@ -227,11 +303,11 @@ export default {
     width: 100%;
 }
 .pricingContentFree {
-    background: rgba(var(--vs-primary),1);
+    background:#fb4141;
     border-radius: 16px 16px 16px 16px;
     border-style: solid;
     border-width: 1px 1px 1px 1px;
-    border-color: #DEE8EB;
+    border-color:#fb4141;
     transition: background 0.3s,border 0.3s,border-radius 0.3s,box-shadow 0.3s;
     margin: 0 12px 0 12px;
     padding: 31px 22px 31px 22px;

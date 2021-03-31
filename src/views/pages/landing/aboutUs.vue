@@ -68,7 +68,7 @@
     margin-top: 15px;
 }
 .thirdPara {
-    color: #c99ef7;
+    color: #fb4141;
     text-decoration: underline;
     cursor: pointer;
     font-family: "Gilroy",Sans-serif;
