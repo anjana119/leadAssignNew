@@ -43,7 +43,7 @@
     .mainHeaderContent {
         color: #091D30;
         font-family: sans-serif;
-        font-size: 86px;
+        font-size: 70px;
         font-weight: 600;
         line-height: 95px;
     }

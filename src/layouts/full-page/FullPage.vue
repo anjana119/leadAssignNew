@@ -215,7 +215,7 @@ export default ({
   }
   .vs-navbar--title {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
   }
   .vs-list {
     padding: 15px;
