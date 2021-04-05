@@ -74,7 +74,7 @@
                             </span>
                         </h1>
                         <h5 class="creditLimit">
-                            <span style="color: #fb4141; font-weight: 500;">
+                            <span style="color: #FF0000; font-weight: 500;">
                                 {{switch1 === true ? "2,040" : "170"}} Credits
                             </span>
                             {{switch1 === true ? "Annually" : "Monthly"}}
@@ -115,7 +115,7 @@
                             </span>
                         </h1>
                         <h5 class="creditLimit">
-                            <span style="color: #fb4141; font-weight: 500;">
+                            <span style="color: #FF0000; font-weight: 500;">
                                 {{switch1 === true ? "4,800" : "400"}} Credits
                             </span>
                             {{switch1 === true ? "Annually" : "Monthly"}}
@@ -156,7 +156,7 @@
                             </span>
                         </h1>
                         <h5 class="creditLimit">
-                            <span style="color: #fb4141; font-weight: 500;">
+                            <span style="color: #FF0000; font-weight: 500;">
                                 {{switch1 === true ? "12,000" : "1000"}} Credits
                             </span>
                             {{switch1 === true ? "Annually" : "Monthly"}}
@@ -241,7 +241,7 @@ export default {
 }
 .btnFreeContent {
     background: white !important;
-    color: #fb4141 !important;
+    color: #FF0000 !important;
     font-size: 15px;
     font-weight: 600;
     width: 100%;
@@ -250,12 +250,12 @@ export default {
     margin-bottom: 10px;
 }
 .btnFreeContent:hover {
-    background: #fb4141 !important;
+    background: #FF0000 !important;
     color: white !important;
     border: 1px solid white !important;
 }
 .btnContent {
-    background: #fb4141 !important;
+    background: #FF0000 !important;
     color: white !important;
     font-size: 15px;
     font-weight: 600;
@@ -266,11 +266,11 @@ export default {
 }
 .btnContent:hover {
     background: white !important;
-    color: #fb4141 !important;
-    border: 1px solid #fb4141 !important;
+    color: #FF0000 !important;
+    border: 1px solid #FF0000 !important;
 }
 .discount {
-    color: #fb4141;
+    color: #FF0000;
     font-weight: 600;
     cursor: pointer;
 }
@@ -303,11 +303,11 @@ export default {
     width: 100%;
 }
 .pricingContentFree {
-    background:#fb4141;
+    background:#FF0000;
     border-radius: 16px 16px 16px 16px;
     border-style: solid;
     border-width: 1px 1px 1px 1px;
-    border-color:#fb4141;
+    border-color:#FF0000;
     transition: background 0.3s,border 0.3s,border-radius 0.3s,box-shadow 0.3s;
     margin: 0 12px 0 12px;
     padding: 31px 22px 31px 22px;

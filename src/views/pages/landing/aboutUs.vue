@@ -8,9 +8,6 @@
                 <span class="firstPara">
                     It’s not by chance that UpLead is the only sales intelligence tool with a data accuracy guarantee. We believe our data should be transparent for our customers.
                 </span>
-                <span class="secondPara">
-                    This core belief guides how we build our product.
-                </span>
                 <span class="thirdPara">
                     This core belief guides how we build our product.
                 </span>
@@ -68,7 +65,7 @@
     margin-top: 15px;
 }
 .thirdPara {
-    color: #fb4141;
+    color: #FF0000;
     text-decoration: underline;
     cursor: pointer;
     font-family: "Gilroy",Sans-serif;

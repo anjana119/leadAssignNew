@@ -210,7 +210,7 @@
     padding: 25px 0px 25px 0px;
 }
 .cardHeaderOurData {
-    color: #fb4141;
+    color: #FF0000;
     font-family: "Gilroy",Sans-serif;
     font-size: 50px;
     line-height: 54px;
