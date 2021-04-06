@@ -1,6 +1,6 @@
 <template>
     <div class="vx-row">
-        <div class="vx-col w-full sm:w-1/2 md:w-1/2 landingBodyFirstCol" style="margin-top: auto; margin-bottom: auto; padding-left: 190px; text-align: left;">
+        <div class="vx-col w-full sm:w-1/2 md:w-1/2 landingBodyFirstCol">
             <div>
                 <h1 class="mainHeaderContent">
                     Import And Export Prospecting Leads...
@@ -20,8 +20,7 @@
                 <img
                     src="https://mcusercontent.com/122a616be556c3f722865e0cf/images/2f4f08bd-5e16-48af-b52a-a48e85c382b4.png"
                     alt="content-img"
-                    class="responsive"
-                    style="width: 450px; height: 100px;"
+                    class="responsive trustedByLogio"
                 >
             </div>
         </div>
@@ -48,6 +47,16 @@
     }
     i.feather {
         margin-left: 18px !important;
+    }
+    .landingBodyFirstCol {
+        margin-top: auto;
+        margin-bottom: auto;
+        padding-left: 190px !important;
+        text-align: left;
+    }
+    .trustedByLogio {
+        width: 450px;
+        height: 100px;
     }
     .bodyTextContentDiv {
         margin: 30px 0px 30px 2px;
@@ -78,7 +87,33 @@
         right: 15px;
         padding: 15px 40px 15px 40px !important;
     }
-    @media only screen and (max-width: 2800px) {
-        
+    @media only screen and (max-width: 1440px) {
+        .mainHeaderContent {
+            font: normal normal bold 55px/82px Poppins;
+        }
+    }
+    @media only screen and (max-width: 1280px) {
+        .mainHeaderContent {
+            font: normal normal bold 47px/62px Poppins;
+        }
+    }
+    @media only screen and (max-width: 1024px) {
+        .landingBodyFirstCol {
+            padding-left: 75px !important;
+        }
+        .mainHeaderContent {
+            font: normal normal 600 47px/62px Poppins;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .landingBodyFirstCol {
+            padding-left: 30px !important;
+        }
+        .trustedByLogio {
+            width: 365px;
+        }
+        .mainHeaderContent {
+            font: normal normal 700 36px/45px Poppins;
+        }
     }
 </style>

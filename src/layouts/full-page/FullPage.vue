@@ -97,7 +97,7 @@
             </a>
           </vs-navbar-item>
           <vs-navbar-item index="6">
-            <vs-button class="startFreeTrial" color="danger" type="filled">
+            <vs-button class="startFreeTrial" color="dark" type="filled">
               Start Free Trial
             </vs-button>
             <a style="cursor: pointer; font: normal normal medium 22px/33px Poppins;" href="/" class="headerLogin">
@@ -118,31 +118,31 @@ export default ({
       list: [
         {
           text: "Prospector",
-          logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/93a7c948-8386-4c53-8bed-5aa4bfe20f82.png",
+          logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/452848e7-a01b-4a36-8f4f-5394e9bd7f60.png",
         },
         {
           text: "Data Enrichment",
-          logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/315a46c4-4fdd-45c7-b172-de776a3b2403.png",
+          logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/9bb655cf-d7bb-41c8-b356-da6b57936da6.png",
         },
         {
           text: "Chrome Extension",
-          logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/f33e5a69-3ad3-45db-85bf-335138af3609.png",
+          logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/b6ae1e21-1ff7-4e51-aacd-dc7d63b9f3fa.png",
         },
         {
           text: "API",
-          logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/a90dd4e0-ae61-42d5-9735-8adb64c650cc.png",
+          logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/7a4ff23d-fd7f-419e-8c3e-428e997e16c1.png",
         },
         {
           text: "Email Verification",
-          logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/c6a7ff87-f94e-4351-aa5a-9aef5cf841ac.png",
+          logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/c75b629d-fc9c-430a-8b02-3754bea7f606.png",
         },
         {
           text: "Technographics",
-          logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/634a9c9f-bc62-4e23-9fd7-b8c9e5ed63cb.png",
+          logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/850a7c21-e77b-41f4-9d46-736aeacc78ee.png",
         },
         {
           text: "Email Finder",
-          logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/95e3a247-9edf-454a-a45d-c0d947b60737.png",
+          logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/8b0a0a78-ede2-41c3-b91b-6b96ddb316d3.png",
         }
       ],
       path: "",
@@ -270,7 +270,7 @@ export default ({
     cursor: pointer;
   }
   .startFreeTrial {
-    background:#FF0000 !important;
+    background: #142537 !important;
     font-family: 'Poppins', sans-serif;
   }
   .vs-navbar .vs-navbar--item a:hover {
@@ -289,22 +289,27 @@ export default ({
     color: #69727A;
     padding: 15px 12px 15px 12px;
   }
-  @media only screen and (max-width: 1280px) {
-    .vs-navbar--header {
-      padding-left: 150px;
+  @media only screen and (max-width: 1440px) {
+    .vs-navbar--title {
+      padding-left: 105px;
     }
   }
   @media only screen and (max-width: 1280px) {
     .vs-navbar--title {
-      justify-content: center;
+      justify-content: end;
+      padding-left: 0px;
+      margin-left: -35px;
     }
     .vs-con-items {
       margin-left: 0%;
     }
+    .vs-navbar--header {
+      padding-left: 0px;
+    }
   }
   @media only screen and (max-width: 1024px) {
     .vs-navbar--title {
-      justify-content: flex-start;
+      margin-left: -4px;
     }
     .vs-con-items {
       margin-left: -28%;
@@ -312,7 +317,7 @@ export default ({
   }
   @media only screen and (max-width: 800px) {
     .vs-navbar--title {
-      justify-content: flex-start;
+      display: none;
     }
     .vs-con-items {
       margin-left: 0%;

@@ -1,5 +1,5 @@
 <template>
-    <div style="display: flex; justify-content: center;">
+    <div style="display: flex; justify-content: center; margin-bottom: -300px;">
         <div class="vx-row" style="margin-bottom: 6%;">
             <div class="vx-col w-full sm:w-1/2 md:w-1/2 firstColForthContent">
                 <h1 class="headerContentForthPage">
@@ -32,11 +32,9 @@ export default {
 <style>
     .headerContentForthPage {
         text-align: left;
-        letter-spacing: 0px;
-        font: normal normal medium 45px/55px Poppins;
+        font: normal normal 500 38px/50px Poppins;
         color: #142537;
         opacity: 1;
-        font-size: 40px;
         margin-bottom: 35px;
         padding-left: 25%;
     }
@@ -73,5 +71,27 @@ export default {
     }
     .linkToView:hover {
         font-weight: 600;
+    }
+    @media only screen and (max-width: 1280px) {
+        .linkToView {
+            width: 50%;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .headerContentForthPage {
+            font: normal normal 500 26px/32px Poppins;
+            margin-bottom: 15px;
+            padding-left: 8%;
+        }
+        .firstColForthContent {
+            padding-top: 6% !important;
+        }
+        .forthContentParagraph {
+            padding-left: 8%;
+        }
+        .linkToView {
+            padding-left: 8%;
+            margin-top: 5px;
+        }
     }
 </style>

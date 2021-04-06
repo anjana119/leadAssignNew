@@ -6,7 +6,7 @@
         <vs-divider class="dividerClass" />
         <homePageThirdContent />
         <homePageForthContent />
-        <homePageFifthContent style="position: relative; bottom: 980px;" />
+        <homePageFifthContent class="highlightedContent" />
     </div>
 </template>
 
@@ -38,5 +38,24 @@
         margin-top: 6%;
         width: 98%;
         margin-left: 16px;
+    }
+    .highlightedContent {
+        position: relative;
+        bottom: 680px;
+    }
+    @media only screen and (max-width: 1440px) {
+        .highlightedContent {
+            bottom: 480px;
+        }
+    }
+    @media only screen and (max-width: 1280px) {
+        .highlightedContent {
+            bottom: 425px;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .highlightedContent {
+            bottom: 260px;
+        }
     }
 </style>

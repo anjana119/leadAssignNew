@@ -60,4 +60,27 @@ export default {
     .vx-card .vx-card__collapsible-content.vs-con-loading__container {
         padding-top: 35px;
     }
+    @media only screen and (max-width: 1440px) {
+        .bodyTextInFifthContent {
+            width: 75%;
+        }
+    }
+    @media only screen and (max-width: 1280px) {
+        .bodyTextInFifthContent {
+            width: 80%;
+        }
+    }
+    @media only screen and (max-width: 1024px) {
+        .bodyTextInFifthContent {
+            width: 100%;
+        }
+        .mainCardInFifthContent {
+            width: 90%;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .bodyTextInFifthContent {
+            font: normal normal 600 20px/25px Poppins;
+        }
+    }
 </style>

@@ -7,16 +7,64 @@
                 </h1>
                 <div>
                     <div class="vx-row mainRow">
-                        <div class="vx-col w-1/2 md:w-1/4 xl:w-1/4" v-for="(card, index) in cardList" :key="index">
+                        <div class="vx-col w-1/2 md:w-1/4 xl:w-1/4 analyticCardBox">
                             <vx-card class="overflow-hidden cardInOurData" style="cursor: pointer;">
                                 <div slot="no-body">
                                     <div class="flex justify-center flex items-center text-center p-6" >
                                         <div>
-                                            <h2 class="mb-1 font-bold cardHeaderOurData">
-                                                {{ card.heding }}
+                                            <h2 id="Count1" class="mb-1 font-bold cardHeaderOurData">
+                                                +54M
                                             </h2>
                                             <span class="cardTextOurData">
-                                                {{ card.text }}
+                                                B2B Contacts with Email Addresses
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </vx-card>
+                        </div>
+                        <div class="vx-col w-1/2 md:w-1/4 xl:w-1/4 analyticCardBox">
+                            <vx-card class="overflow-hidden cardInOurData" style="cursor: pointer;">
+                                <div slot="no-body">
+                                    <div class="flex justify-center flex items-center text-center p-6" >
+                                        <div>
+                                            <h2 id="Count2" class="mb-1 font-bold cardHeaderOurData">
+                                                +14M
+                                            </h2>
+                                            <span class="cardTextOurData">
+                                                Global Company Profiles
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </vx-card>
+                        </div>
+                        <div class="vx-col w-1/2 md:w-1/4 xl:w-1/4 analyticCardBox">
+                            <vx-card class="overflow-hidden cardInOurData" style="cursor: pointer;">
+                                <div slot="no-body">
+                                    <div class="flex justify-center flex items-center text-center p-6" >
+                                        <div>
+                                            <h2 id="Count3" class="mb-1 font-bold cardHeaderOurData">
+                                                +16K
+                                            </h2>
+                                            <span class="cardTextOurData">
+                                                Technologies Tracked
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </vx-card>
+                        </div>
+                        <div class="vx-col w-1/2 md:w-1/4 xl:w-1/4 analyticCardBox">
+                            <vx-card class="overflow-hidden cardInOurData" style="cursor: pointer;">
+                                <div slot="no-body">
+                                    <div class="flex justify-center flex items-center text-center p-6" >
+                                        <div>
+                                            <h2 id="Count4" class="mb-1 font-bold cardHeaderOurData">
+                                                95%
+                                            </h2>
+                                            <span class="cardTextOurData">
+                                                Accuracy Guarantee
                                             </span>
                                         </div>
                                     </div>
@@ -34,12 +82,11 @@
                 </h1>
                 <div
                     class="vx-row"
-                    style="display: flex; justify-content: center; margin-bottom: 35px;"
                     v-for="(item, mainIndex) in secondCardList"
                     :key="mainIndex"
                 >
                     <div
-                        class="vx-col w-1/2 md:w-1/4 lg:w-1/4 secondColOurData"
+                        class="vx-col w-full sm:w-1/2 md:w-1/4 lg:w-1/4 secondColOurData"
                         v-for="(card, index) in item.col"
                         :key="index"
                     >
@@ -67,44 +114,26 @@
     export default {
         data() {
             return {
-                cardList: [
-                    {
-                        text: "B2B Contacts with Email Addresses",
-                        heding: "+54M"
-                    },
-                    {
-                        text: "Global Company Profiles",
-                        heding: "+14M"
-                    },
-                    {
-                        text: "Technologies Tracked",
-                        heding: "+16K"
-                    },
-                    {
-                        text: "Accuracy Guarantee",
-                        heding: "95%"
-                    }
-                ],
                 secondCardList: [
                     {
                         col: [
                             {
-                                logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/91ea2ff6-ffd5-46ba-b54b-41e1fdc81a29.png",
+                                logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/f38a3782-e115-49bd-80c0-198585449437.png",
                                 text: "We search and analyze millions of public documents to hunt down relevant information",
                                 heding: "STEP 1"
                             },
                             {
-                                logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/3882221e-644c-4331-9607-58fe39f640a0.png",
+                                logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/da0f8ee1-1192-411c-ad0c-5e5d9f8ab384.png",
                                 text: "To supplement our data, and make it even more comprehensive, we also license data from trusted third parties",
                                 heding: "STEP 2"
                             },
                             {
-                                logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/2e256e7e-c606-4adc-a499-36f12aa882c3.png",
+                                logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/23b8d111-533a-4ac8-9bba-438d05b30fd5.png",
                                 text: "We analyze, categorize and label our data (Machine Learning, Rule-Based Learning, Proprietary Algorithms)",
                                 heding: "STEP 3"
                             },
                             {
-                                logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/9249c942-d8c7-4432-ae8a-4eb711a16954.png",
+                                logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/126725a5-29d4-445f-b01a-2db83c0b82db.png",
                                 text: "We test and validate our information to remove incorrect, stale and unverifiable information",
                                 heding: "STEP 4"
                             }
@@ -113,22 +142,22 @@
                     {
                         col: [
                             {
-                                logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/d988abaa-8849-4545-9d57-180eefb126a7.png",
+                                logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/10e035f0-0194-4e62-a09a-9d156e83122e.png",
                                 text: "Accurate information is loaded into the UpLead database, ready for customers to access (By API or Web Application)",
                                 heding: "STEP 5"
                             },
                             {
-                                logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/94022abb-147f-4039-846a-201f0a535519.png",
+                                logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/9c00ad6b-9e3c-4be2-817d-05574e90542f.png",
                                 text: "At the point where customers download their data, we perform real-time email verification, and put our data through a final round of tests",
                                 heding: "STEP 6"
                             },
                             {
-                                logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/cd380fef-c29f-4d2c-8849-6b5d1fff0cd3.png",
+                                logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/87e21b8c-19db-49e0-aa77-e827e0229bf9.png",
                                 text: "We deliver our accurate data to our customers (Any emails that could not be verified gets sent back to our team of manual researchers.)",
                                 heding: "STEP 7"
                             },
                             {
-                                logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/ab27e78b-4c49-4483-87d6-f2c12bc3c602.png",
+                                logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/5f3ecc61-320a-466d-b898-0bb469c8c3f4.png",
                                 text: "Researchers comb through the data painstakingly, and update UpLead’s database to close the loop",
                                 heding: "STEP 8"
                             }
@@ -136,6 +165,149 @@
                     }
                 ]
             };
+        },
+        watch: {},
+        mounted() {
+            this.animateValue();
+            this.animateValue2();
+            this.animateValue3();
+            this.animateValue4();
+        },
+        created() {
+            this.animateValue();
+            this.animateValue2();
+            this.animateValue3();
+            this.animateValue4();
+        },
+        methods: {
+            animateValue(start = 0, end = null, duration = 3000) {
+                let obj = document.getElementById('Count1');
+                if (obj) {
+                    // save starting text for later (and as a fallback text if JS not running and/or google)
+                    var textStarting = obj.innerHTML;
+                    // remove non-numeric from starting text if not specified
+                    end = end || parseInt(textStarting.replace(/\D/g, ""));
+                    var range = end - start;
+                    // no timer shorter than 50ms (not really visible any way)
+                    var minTimer = 50;
+                    // calc step time to show all interediate values
+                    var stepTime = Math.abs(Math.floor(duration / range));
+                    // never go below minTimer
+                    stepTime = Math.max(stepTime, minTimer);
+                    // get current time and calculate desired end time
+                    var startTime = new Date().getTime();
+                    var endTime = startTime + duration;
+                    var timer;
+                    function run() {
+                        var now = new Date().getTime();
+                        var remaining = Math.max((endTime - now) / duration, 0);
+                        var value = Math.round(end - (remaining * range));
+                        // replace numeric digits only in the original string
+                        obj.innerHTML = textStarting.replace(/([0-9]+)/g, value);
+                        if (value == end) {
+                            clearInterval(timer);
+                        }
+                    }
+                    timer = setInterval(run, stepTime);
+                    run();
+                }
+            },
+            animateValue2(start = 0, end = null, duration = 3000) {
+                let obj = document.getElementById('Count2');
+                if (obj) {
+                    // save starting text for later (and as a fallback text if JS not running and/or google)
+                    var textStarting = obj.innerHTML;
+                    // remove non-numeric from starting text if not specified
+                    end = end || parseInt(textStarting.replace(/\D/g, ""));
+                    var range = end - start;
+                    // no timer shorter than 50ms (not really visible any way)
+                    var minTimer = 50;
+                    // calc step time to show all interediate values
+                    var stepTime = Math.abs(Math.floor(duration / range));
+                    // never go below minTimer
+                    stepTime = Math.max(stepTime, minTimer);
+                    // get current time and calculate desired end time
+                    var startTime = new Date().getTime();
+                    var endTime = startTime + duration;
+                    var timer;
+                    function run() {
+                        var now = new Date().getTime();
+                        var remaining = Math.max((endTime - now) / duration, 0);
+                        var value = Math.round(end - (remaining * range));
+                        // replace numeric digits only in the original string
+                        obj.innerHTML = textStarting.replace(/([0-9]+)/g, value);
+                        if (value == end) {
+                            clearInterval(timer);
+                        }
+                    }
+                    timer = setInterval(run, stepTime);
+                    run();
+                }
+            },
+            animateValue3(start = 0, end = null, duration = 3000) {
+                let obj = document.getElementById('Count3');
+                if (obj) {
+                    // save starting text for later (and as a fallback text if JS not running and/or google)
+                    var textStarting = obj.innerHTML;
+                    // remove non-numeric from starting text if not specified
+                    end = end || parseInt(textStarting.replace(/\D/g, ""));
+                    var range = end - start;
+                    // no timer shorter than 50ms (not really visible any way)
+                    var minTimer = 50;
+                    // calc step time to show all interediate values
+                    var stepTime = Math.abs(Math.floor(duration / range));
+                    // never go below minTimer
+                    stepTime = Math.max(stepTime, minTimer);
+                    // get current time and calculate desired end time
+                    var startTime = new Date().getTime();
+                    var endTime = startTime + duration;
+                    var timer;
+                    function run() {
+                        var now = new Date().getTime();
+                        var remaining = Math.max((endTime - now) / duration, 0);
+                        var value = Math.round(end - (remaining * range));
+                        // replace numeric digits only in the original string
+                        obj.innerHTML = textStarting.replace(/([0-9]+)/g, value);
+                        if (value == end) {
+                            clearInterval(timer);
+                        }
+                    }
+                    timer = setInterval(run, stepTime);
+                    run();
+                }
+            },
+            animateValue4(start = 0, end = null, duration = 3000) {
+                let obj = document.getElementById('Count4');
+                if (obj) {
+                    // save starting text for later (and as a fallback text if JS not running and/or google)
+                    var textStarting = obj.innerHTML;
+                    // remove non-numeric from starting text if not specified
+                    end = end || parseInt(textStarting.replace(/\D/g, ""));
+                    var range = end - start;
+                    // no timer shorter than 50ms (not really visible any way)
+                    var minTimer = 50;
+                    // calc step time to show all interediate values
+                    var stepTime = Math.abs(Math.floor(duration / range));
+                    // never go below minTimer
+                    stepTime = Math.max(stepTime, minTimer);
+                    // get current time and calculate desired end time
+                    var startTime = new Date().getTime();
+                    var endTime = startTime + duration;
+                    var timer;
+                    function run() {
+                        var now = new Date().getTime();
+                        var remaining = Math.max((endTime - now) / duration, 0);
+                        var value = Math.round(end - (remaining * range));
+                        // replace numeric digits only in the original string
+                        obj.innerHTML = textStarting.replace(/([0-9]+)/g, value);
+                        if (value == end) {
+                            clearInterval(timer);
+                        }
+                    }
+                    timer = setInterval(run, stepTime);
+                    run();
+                }
+            }
         }
     }
 </script>
@@ -144,12 +316,18 @@
 .mainRow {
     padding: 0px;
 }
+.vx-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+}
 .secondColOurData {
     display: flex;
     justify-content: center;
     padding-top: 100px;
     padding-bottom: 25px;
-    max-width: 18%
+    max-width: 18%;
+    margin-bottom: 0px;
 }
 .ourDataBlogContent {
     border-radius: 16px 16px 16px 16px;
@@ -210,7 +388,7 @@
     padding: 25px 0px 25px 0px;
 }
 .cardHeaderOurData {
-    color: #FF0000;
+    color: #FF0000 !important;
     font-family: "Gilroy",Sans-serif;
     font-size: 50px;
     line-height: 54px;
@@ -241,9 +419,24 @@
     .mainRow {
         padding: 0px 20px 0px 20px;
     }
+}
+@media (min-width: 250px) and (max-width: 1030px){
     .secondColOurData {
+        width: 50% !important;
         max-width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+    }
+    .vx-row {
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-bottom: 0px;
+    }
+    .headingSecondOurData {
+        width: 75%;
+        line-height: 45px;
+    }
+    .analyticCardBox {
+        width: 50% !important;
     }
 }
 </style>

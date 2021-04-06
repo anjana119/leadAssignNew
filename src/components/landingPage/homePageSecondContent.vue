@@ -67,11 +67,9 @@ export default {
     }
     .headerContentSecondPage {
         text-align: left;
-        letter-spacing: 0px;
-        font: normal normal medium 45px/55px Poppins;
+        font: normal normal bold 35px/55px Poppins;
         color: #142537;
         opacity: 1;
-        font-size: 40px;
         margin-bottom: 35px;
     }
     .secondContentParagraph {
@@ -86,7 +84,40 @@ export default {
         background:#FF0000 !important;
         left: 0px;
         right: 15px;
-        top: 75px;
+        top: 50px;
         padding: 15px 40px 15px 40px !important;
+    }
+    @media only screen and (max-width: 1440px) {
+        .headerContentSecondPage {
+            font: normal normal 700 30px/44px Poppins;
+            margin-bottom: 30px;
+        }
+        .actionButtonSecondContent {
+            top: 30px;
+        }
+        [dir=ltr] .video-js .vjs-big-play-button {
+            top: -15px !important;
+        }
+    }
+    @media only screen and (max-width: 1280px) {
+        .headerContentSecondPage {
+            font: normal normal 700 25px/38px Poppins;
+        }
+        [dir=ltr] .video-js .vjs-big-play-button {
+            top: 45px !important;
+        }
+    }
+    @media only screen and (max-width: 1024px) {
+        .headerContentSecondPage {
+            margin-bottom: 8px;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .headerContentSecondPage {
+            font: normal normal 700 20px/28px Poppins;
+        }
+        .secondContentParagraph {
+            font: normal normal 300 15px/33px Poppins;
+        }
     }
 </style>

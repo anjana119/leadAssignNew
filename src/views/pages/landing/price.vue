@@ -28,7 +28,7 @@
         </div>
         <div style="display: flex; justify-content: center;" class="mb-5">
             <div class="vx-row" style="width: 67%;">
-                <div class="vx-col w-full sm:w-1/2 md:w-1/4 lg:w-1/4 firstColPricing" style="padding-top: 70px; padding-bottom: 60px;">
+                <div class="vx-col w-full sm:w-1/2 md:w-1/4 lg:w-1/4 firstColPricing">
                     <div class="pricingContentFree">
                         <h3 class="contentHeaderFree">
                             Free Trial
@@ -61,7 +61,7 @@
                         </vs-button>
                     </div>
                 </div>
-                <div class="vx-col w-full sm:w-1/2 md:w-1/4 lg:w-1/4 secondColPricing" style="padding-top: 100px; padding-bottom: 25px;">
+                <div class="vx-col w-full sm:w-1/2 md:w-1/4 lg:w-1/4 secondColPricing">
                     <div class="pricingContent">
                         <h3 class="contentHeader">
                             Essentials
@@ -102,7 +102,7 @@
                         </vs-button>
                     </div>
                 </div>
-                <div class="vx-col w-full sm:w-1/2 md:w-1/4 lg:w-1/4 thirdColPricing" style="padding-top: 100px; padding-bottom: 25px;">
+                <div class="vx-col w-full sm:w-1/2 md:w-1/4 lg:w-1/4 thirdColPricing">
                     <div class="pricingContent">
                         <h3 class="contentHeader">
                             Plus
@@ -143,7 +143,7 @@
                         </vs-button>
                     </div>
                 </div>
-                <div class="vx-col w-full sm:w-1/2 md:w-1/4 lg:w-1/4 forthColPricing" style="padding-top: 100px; padding-bottom: 25px;">
+                <div class="vx-col w-full sm:w-1/2 md:w-1/4 lg:w-1/4 forthColPricing">
                     <div class="pricingContent">
                         <h3 class="contentHeader">
                             Professional
@@ -359,17 +359,65 @@ export default {
 .firstColPricing {
     display: flex;
     justify-content: flex-end;
+    padding-top: 70px !important;
+    padding-bottom: 60px !important;
 }
 .secondColPricing {
     display: flex;
     justify-content: center;
+    padding-top: 100px !important;
+    padding-bottom: 25px !important;
 }
 .thirdColPricing {
     display: flex;
     justify-content: center;
+    padding-top: 100px !important;
+    padding-bottom: 25px !important;
 }
 .forthColPricing {
     display: flex;
     justify-content: flex-start;
+    padding-top: 100px !important;
+    padding-bottom: 25px !important;
+}
+@media only screen and (max-width: 550px) {
+    .firstColPricing {
+        padding-top: 40px !important;
+        padding-bottom: 0px !important;
+    }
+    .secondColPricing {
+        padding-top: 20px !important;
+        padding-bottom: 0px !important;
+    }
+    .thirdColPricing {
+        padding-top: 20px !important;
+        padding-bottom: 0px !important;
+    }
+    .forthColPricing {
+        padding-top: 20px !important;
+        padding-bottom: 40px !important;
+    }
+}
+@media (min-width: 550px) and (max-width: 1440px){
+    .firstColPricing {
+        width: 50% !important;
+        padding-top: 70px !important;
+        padding-bottom: 25px !important;
+    }
+    .secondColPricing {
+        width: 50% !important;
+        padding-top: 100px !important;
+        padding-bottom: 0px !important;
+    }
+    .thirdColPricing {
+        width: 50% !important;
+        padding-top: 30px !important;
+        padding-bottom: 25px !important;
+    }
+    .forthColPricing {
+        width: 50% !important;
+        padding-top: 30px !important;
+        padding-bottom: 25px !important;
+    }
 }
 </style>

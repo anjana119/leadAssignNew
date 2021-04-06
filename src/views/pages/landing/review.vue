@@ -33,17 +33,17 @@
             return {
                 cardList: [
                     {
-                        logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/319d8497-be79-4eec-a7d9-28f4a50c0bce.png",
+                        logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/452848e7-a01b-4a36-8f4f-5394e9bd7f60.png",
                         text: "O2Oleads gives you access to 54M+ business contacts worldwide, making it easy for you to build targeted prospect lists. To identify your ideal prospects, search by title, job function, management level, industry, location, company size, technologies used and more.",
                         heding: "54M+ B2B Contacts At Your Fingertips"
                     },
                     {
-                        logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/effdac34-1812-40d3-8ccb-b0ef7695a71e.png",
+                        logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/87e21b8c-19db-49e0-aa77-e827e0229bf9.png",
                         text: "O2Oleads is the only tool in the market to provide real-time email verification. Anytime you download or export leads, we verify the email address in real-time. This translates into higher response rates and more conversions for you.",
                         heding: "High Quality Real-Time Verified Data"
                     },
                     {
-                        logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/83b3edb1-7c44-4746-ad03-363c28c5948c.png",
+                        logo: "https://mcusercontent.com/122a616be556c3f722865e0cf/images/c75b629d-fc9c-430a-8b02-3754bea7f606.png",
                         text: "O2Oleads automatically enriches your data with over 50 different data points, including job function, management level, social media links, and more. This gives you more context, and allows you to build rapport with your prospects.",
                         heding: "Data Enrichment with 50+ Data Points"
                     }

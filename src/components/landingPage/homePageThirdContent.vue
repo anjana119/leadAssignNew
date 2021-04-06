@@ -42,7 +42,7 @@ export default {
         color: #FFFFFF;
         opacity: 1;
         height: 149px;
-        top: 180px;
+        top: 115px;
         position: relative;
         opacity: 1;
         display: flex;
@@ -80,5 +80,26 @@ export default {
         top: 310px;
         margin-left: auto;
         margin-right: auto;
+    }
+    @media only screen and (max-width: 1024px) {
+        .mainHeaderThirdContent {
+            font: normal normal 600 47px/60px Poppins;
+            top: 100px;
+        }
+        .bodyTextThirdContent {
+            width: 100%;
+            top: 215px;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .mainHeaderThirdContent {
+            font: normal normal 600 38px/45px Poppins;
+        }
+        .bodyTextThirdContent {
+            top: 180px;
+        }
+        .actionButtonThirdContent {
+            top: 245px;
+        }
     }
 </style>
